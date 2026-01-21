@@ -3,15 +3,23 @@ import { useState } from "react";
 const ToggleChallenge = () => {
   const [isTogel,setTogel] = useState(false);
 
-  const handelClick = ()=> {
-      
-  }
+  // const handelClick = ()=> {
+  //     if(isTogel){
+  //       setTogel(false);
+  //       return;
+  //     }
+  //     setTogel(true);
+  // }
   
 
   return (
     <div>
-        <button className="btn">Togel Alert</button>
-        <Alert/>
+      {/*  */}
+        <button className="btn" onClick={()=>{
+          setTogel(!isTogel)
+        }}>Togel Alert</button>
+        {/* conditional rendring */}
+        {isTogel && <Alert/>}
     </div>
   )
 };
